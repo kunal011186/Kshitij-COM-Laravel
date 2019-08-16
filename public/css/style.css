@@ -1,0 +1,72 @@
+/*
+Theme Name: Kshitij
+Theme URI: http://domyinc.com
+Author: the domy team
+Author URI: http://domyinc.com/
+Description: The theme is for kshitij color of money
+Version: 1.0
+
+
+-------------------------------------------------------------- */
+
+.category-title-on-front-page
+{
+	color: rgb(52, 73, 94);
+	display: block;
+	font-size: 14px;
+}
+
+.rich-button
+{
+    text-align:center;
+    font-weight:bold;
+    border-radius: 4px;
+    color: #ffffff;
+    background: #ff8027;
+    font-size:18px;
+    text-transform:uppercase;
+    padding:5px;
+}
+
+.rich-button:hover { text-decoration:underline }
+
+.rich-button-fatter
+{
+    text-align:center;
+    font-weight:bold;
+    border-radius: 4px;
+    color: #ffffff;
+    background: #ff8027;
+    font-size:18px;
+    text-transform:uppercase;
+    padding:8px;
+}
+
+.rich-button-fatter:hover { text-decoration:underline }
+
+.d-widget10 img {
+	height: auto;
+}
+.d-widget10 a {
+color: #007fc6;
+}
+.d-widget10 .d-post-img, .d-serch-rslt .d-post-img {
+background-position: 50% 0% !important;
+}
+
+.d-login-btn {
+display: none!important;
+}
+
+@media only screen and (max-width: 320px){
+ .d-social-share-wrap .d-share-btn {
+      padding: 3px !important;
+     font-size: 12px !important;
+   }
+  .d-social-share-wrap .d-share-txt {
+     font-size: 9px !important;
+  }
+  .d-social-share-wrap .d-share-count {
+     font-size: 20px !important;
+   }
+}
