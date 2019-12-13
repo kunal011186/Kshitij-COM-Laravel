@@ -1,4 +1,4 @@
-<div class="container hidden-xs">
+<div class="container hidden-xs" style="padding-right: 0px;padding-left: 0px;">
 	<div class="row">
         <div class="col-sm-12 d-breadcrumb-wrap">
             <ul class="breadcrumb">

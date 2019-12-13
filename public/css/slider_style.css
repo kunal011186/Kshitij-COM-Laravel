@@ -1,0 +1,43 @@
+.owl-pagination {
+  display: none;
+}
+#owl-navigators {
+  position: absolute;
+  top: 33%;
+  z-index: 5;
+  display: inline-block;
+  width: 25px;
+  height: 45px;
+  background: none !important;
+}
+.owl-next {
+  position: absolute;
+  top: 33%;
+  z-index: 5;
+  display: inline-block;
+  width: 25px;
+  height: 45px;
+  background: none !important;
+  right: 0px;
+  background-image: url(../images/next.png) !important;
+}
+.owl-prev {
+  position: absolute;
+  top: 33%;
+  z-index: 5;
+  display: inline-block;
+  width: 25px;
+  height: 45px;
+  background: none !important;
+  left: 0px;
+  background-image: url(../images/prev.png) !important;
+}
+.item {
+  text-align: center;
+}
+.graph-type {
+  min-height: 300px;
+}
+body {
+  padding: 0px !important;
+}

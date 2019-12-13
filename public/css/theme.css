@@ -253,13 +253,7 @@ a {
 	background-color: transparent;
 	border-color: #dddddd;
 }
-.table:active {
-	background-color: #fff;
-}
-.dropdown {
-	background-color: #fff;
-	border: rgba(0, 0, 0, .15);
-}
+
 .dropdown-fallback {
 	border: #ccc;
 }

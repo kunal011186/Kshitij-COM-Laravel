@@ -12,6 +12,7 @@
 */
 
 Route::get('/', 'HomeController@welcome');
+Route::get('/test-post', 'HomeController@testPost');
 
 Auth::routes();
 /*
@@ -23,9 +24,9 @@ Route::get('/logout', function()
 Route::get('/previous/{id}', 'PostController@previous')->name('previous');
 
 Route::group(['middleware' => 'auth','prefix' => 'admin'], function () {
-    Route::get('/', function () {
+   /* Route::get('/', function () {
     	return view('admin.index');
-	})->name('admin-home');
+	})->name('admin-home'); */
 	
 	Route::get('/create-post', 'PostController@create')->name('create-post');
 	Route::post('/save-post', 'PostController@store')->name('save-post');

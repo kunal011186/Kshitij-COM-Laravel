@@ -1,0 +1,256 @@
+/*
+    AUTHOR NAME     : NITISH HOODA
+    AUTHOR'S EMAIL  : NITISHKUM91@GMAIL.COM
+    
+*/
+.circle {
+  border-radius: 50%;
+  width: 5px;
+  height: 5px;
+  display: inline-block;
+  background: #5da400;
+  vertical-align: middle;
+}
+.container {
+  position: relative;
+}
+.field{
+width: 300px;
+
+}
+.clear{
+      clear:both;
+}
+.freeservices a:hover {
+    text-decoration: none;
+}
+.freeservices-btn {
+    color:rgb(85, 153, 0); 
+    display: table-cell;
+    width: 301px;
+    height: 70px;
+    vertical-align: middle; 
+    font-size:25px;
+    border:1px solid #B0ACAC;
+    text-align: center;
+    background: white;
+    text-decoration: none;
+    font-family: "lubalin_graph_demiregular", Georgia, "Times New Roman", Times, serif;
+}
+.freeservices-btn:hover{
+    background: rgb(85, 153, 0);
+    color: white;
+    text-decoration: none;
+}
+.home{
+            margin-top: 7px;
+           /* background: url("../images/vssetu2.jpg");*/
+            padding-top: 0px;
+            margin-bottom: 7px;
+            max-height: 100%;
+            max-width: 100%;
+            padding-top: 0px;
+            background-size: 100%;
+            -webkit-background-size: 100%;
+            -moz-background-size: 100%;
+            -o-background-size: 100%;
+}
+.home p{
+           padding: 60px 0 0px 0;
+            text-align: center;
+            font-size: 22px;
+            color: rgb(89, 85, 85);           
+}
+.home span{
+            font-family: "eausans_book",sans-serif;
+            font-size: 34px;
+            font-weight: bolder;
+            color: #000000;
+}
+.newspapers{
+            padding: 30px 20px 30px 20px;
+            text-align: center;
+            background:#EFEFEF;
+            font-size: 0px;
+}
+.services{
+            background: #E5EDEF;
+            padding-top: 15px;
+            padding-bottom: 5px;
+            margin-top: 8px
+}
+.services .forecast{
+            border: 2px solid #ffffff;
+            margin: 0px 17% 30px 17%;
+            padding: 10px 0 10px 0;
+}
+.services .forecast #checkbox1{
+            color: #ffffff;
+            border-radius: 8px;
+            content:"\2714";
+            
+}
+.services .forecast label{
+            font-family: "eausans_book",sans-serif;
+            font-size: 14px;
+            font-weight: normal;
+            padding-left: 5px;
+            color: #B0ACAC;
+}
+#contact{
+            font-family: "eausans_book",sans-serif;
+            font-size: 20px;
+            font-weight: normal;
+            padding-left: 5px;
+            color: black;
+}
+.contact-office{
+            font-family: "eausans_book",sans-serif;
+            font-size: 15px;
+            font-weight: normal;
+            padding-left: 5px;
+            color: #5c5c5c;
+}
+.explore {
+            background: #5D6061;
+            padding: 15px 15% 15px 15%;
+}
+.explore input{
+            background: rgb(75, 155, 245);
+            padding: 15px 70px 15px 70px;
+            font-size: 20px;            
+            border: none;
+            color: #fff;
+            margin-top:25px;
+            float: right;
+}
+.explore h3{
+           font-family: "eausans_book",sans-serif;
+            font-size: 30px;
+            color: #FD7C1F;
+            font-weight: bold;
+}
+.explore p{
+            padding: 0;
+            font-size: 18px;
+            color:#B0ACAC;
+}
+
+.client{
+            padding: 20px 10% 50px 10%;
+}
+.client img{
+            float:left;
+}
+.client #fujitsu{
+            width: 100px;
+            margin-right: 7.5%;
+            padding-top: 20px;
+}
+.client #adidas{
+            width: 80px;
+            margin-right: 7.5%;
+}
+.client #triplingo{
+            width: 120px;
+            margin-right: 7.5%;
+            padding-top: 10px;
+}
+.client #fedex{
+            width: 110px;
+            margin-right: 5.5%;
+            padding-top: 20px;
+}
+.client #premier{
+            width: 150px;
+            margin-right: 5.5%;
+            padding-top: 20px;
+}
+.client #every{
+            width: 128px;
+            padding-top: 15px;
+}
+.client h4{
+           color:#767474;
+           font-weight: normal;
+           font-size: 18px;
+           float: left;
+           padding: 0 3px 0 3px;
+}
+.client p{
+            text-align: center;
+            color:#B0ACAC;
+            }
+.client-logo {
+      display: inline-block;
+      padding-right: 30px;
+      padding-left: 30px;
+}
+.client-logo img{
+      width: 100px;
+}
+table tr{
+            border: 1px solid rgb(226, 225, 225);
+            padding: 5px 5px 5px 5px;
+}
+table td{
+            padding: 9px 8px 9px 8px;
+            color: black; 
+            font-size:13px;
+            font-family: "eausans_book",sans-serif;
+}
+table th{
+            padding: 5px 8px 5px 8px;
+            font-weight: normal;
+            background: #EFEFEF;
+            color: #B0ACAC;
+            font-size:14px;
+            font-family: "eausans_book",sans-serif;
+}
+.home_footer{
+        text-align: center;
+}
+.home_footer .footer_menu{
+            text-align: center;
+            background: #FAFAFA;
+            border-top: 1px solid #B0ACAC;
+}
+.home_footer .footer_menu li{
+            display: inline;
+            list-style: inherit;
+            font-family: "eausans_book",sans-serif;
+            font-size: 14px;
+            color: #7E7C7C;
+            border-left: 1px solid #B0ACAC;
+            border-right: 1px solid #E7E4E4;
+            margin: 20px 0 20px 0;            
+}
+#hr3{
+            width: 41%;
+            float: left;
+            margin:17px 0 25px;
+}
+#hr4{
+            width: 42%;
+            float: left;
+            margin: 17px 0 40px;
+}
+.newspapers img {
+    opacity: 0.5;
+    filter: alpha(opacity=40); 
+}
+img:hover {
+    opacity: 1.0;
+    filter: alpha(opacity=100);
+} 
+a:hover {
+}
+.reg input{
+            background: rgb(75, 155, 245);
+            padding: 15px 70px 15px 70px;
+            font-size: 20px;            
+            border: none;
+            color: #fff;
+            margin-top:25px;
+            float: right;
+}

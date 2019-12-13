@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html> 
+<head> 
+<title></title> <link rel="stylesheet" media="" type="text/css" href="/StyleSheets/sidemenu-new.css" >  
+
+<!-- Google Analytic Code Begins -->
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-33669601-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<!-- Google Analytic Code Ends -->
+
+<style type="text/css">
+
+.write {
+font-family: verdana, helvetica, sans-serif;
+font-size: 12px;
+text-align:justify;
+text-decoration:none;
+}
+
+
+.box {
+    width: 800px;
+    height: 1850px;
+    background-color: white;
+    border-style: medium;
+    border-width: 1px;
+    box-shadow: 2px 2px 2px 2px #888888;
+} 
+
+	</style>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body link="#0000FF" vlink="#800080">
+<center> <p> 
+<div align="center" class="box">
+<table border="0" cellpadding="15" cellspacing="5" width="750px">
+<tr>
+<td valign="top">
+<div align="center"><img src="../images/logo & Co name small copy.jpg"></div>
+<hr>
+<p align="center">
+<img src="../images/numbers-behind-rupee-forecast.jpg">
+</p>
+<p>
+<div style="background-color:#167FC3" align="center"><font color="#FFFFFF" size="5" style="font-family: verdana"><b>Testimonials</b></font></div>
+<table>
+<tr>
+<td>
+<img src="../images/muralisaraf.jpg">
+</td>
+<td class="write">
+<b>SHRI MURLI SARAF<br>
+Shyam Group of Companies</b><br>
+Bengaluru
+<p>
+<i>Kshitij is the only advisor that has taken a firm stand on the market at various times and at the same time they have always been willing to accept their mistakes gracefully.</i>
+</td>
+</tr>
+</table>
+<p><br></p>
+<div style="background-color:#167FC3" align="center"><font color="#FFFFFF" size="5" style="font-family: verdana"><b>Rupee Trial Registration Form</b></font></div>
+
+<strong><font size="2" style="font-family: Arial,MS Sans Serif; color:#000000;"><em>(* fields are mandatory)</font></em></strong>
+
+<script type="text/javascript" src="https://kshitij.infusionsoft.com/app/form/iframe/34e1e1480924c7f07bd5b3ac46e4d4fa"></script>
+
+
+
+
+</td>
+</tr>
+</table>
+</div>
+</center>
+</body>
+</html>

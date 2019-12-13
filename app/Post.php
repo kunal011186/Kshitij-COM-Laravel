@@ -1,7 +1,7 @@
 <?php
 
 namespace App;
-
+use DB;
 use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
@@ -89,6 +89,13 @@ class Post extends Model
     {
         $post = Post::inRandomOrder()->first();
         // var_dump($post);
+        return $post;
+    }
+
+    public static function getData()
+    {
+        
+        
         return $post;
     }
 

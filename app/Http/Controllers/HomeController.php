@@ -2,6 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use URL;
+
+use Log;
+
+use DB;
+
+use Illuminate\Support\Facades\Redirect;
+
+use Illuminate\Support\Facades\Input;
+
+use Illuminate\Support\Facades\Auth;
+
 use Illuminate\Http\Request;
 use App\Post;
 
@@ -26,5 +38,18 @@ class HomeController extends Controller
         //$posts = Post::publishedPosts();
         // var_dump($posts);
         return view('index'/*,['posts'=>$posts]*/);
+    }
+
+    public function testPost()
+    {
+        $data ="";
+
+        $data= DB::table('wp_posts')->where('post_title', 'Investing - Where do we want to be right - Short Term or Long Term?')->get();
+
+        var_dump($data);
+
+       // $data= Post::getData();
+        
+        //return view('post',array('data'=> $data))->render();
     }
 }
