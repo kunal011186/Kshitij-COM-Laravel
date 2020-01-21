@@ -2,7 +2,10 @@
 
 @section('content-body')
 
-<a href="http://localhost/Kshitij-COM-Laravel/public/test-post"> Investing - Where do we want to be right - Short Term or Long Term?</a>
+@foreach($posts as $row)
+<a href="http://localhost/Kshitij-COM-Laravel/public/{!!$row['post_name']!!}"> {!!$row['post_title']!!}</a>
+<br><br>
+@endforeach
  		
 @stop
 @section('sidebar')

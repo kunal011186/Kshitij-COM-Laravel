@@ -123,7 +123,7 @@
                 <div class="col-md-3">
                     @yield('sidebar')
                     
-        <div class="d-widget3 d-sidebar"><div class="list-group"><a class="list-group-item active">CATEGORY</a><a href="{{url('category/recently-added')}}" class="list-group-item ">Recently Added</a><a href="{{url('category/risk-management')}}" class="list-group-item ">Forex Risk Management</a><a href="{{url('category/investment-psychology')}}" class="list-group-item ">Investment Psychology</a><a href="{{url('category/research')}}" class="list-group-item ">Research</a><a href="{{url('category/global-equities')}}" class="list-group-item ">Global Equities</a><a href="{{url('category/longterm-forex-forecasts')}}" class="list-group-item ">Longterm Forex Forecasts</a></div></div>
+        <div class="d-widget3 d-sidebar"><div class="list-group"><a class="list-group-item active">CATEGORY</a><a href="{{url('category/top-stories')}}" class="list-group-item ">Recently Added</a><a href="{{url('category/risk-management')}}" class="list-group-item ">Forex Risk Management</a><a href="{{url('category/investment-psychology')}}" class="list-group-item ">Investment Psychology</a><a href="{{url('category/research')}}" class="list-group-item ">Research</a><a href="{{url('category/global-equities')}}" class="list-group-item ">Global Equities</a><a href="{{url('category/longterm-forex-forecasts')}}" class="list-group-item ">Longterm Forex Forecasts</a></div></div>
 
         <div class="d-widget8 d-sidebar"><h3 class="text-muted" style="text-align:center">TWEETS</h3><p align="center"><a class="twitter-follow-button" href="https://twitter.com/Kshitijfx">Follow @Kshitijfx</a></p><hr>
         </div>

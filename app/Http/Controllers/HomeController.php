@@ -17,6 +17,8 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Post;
 
+use App\Wp_post;
+
 class HomeController extends Controller
 {
     /**
@@ -35,9 +37,10 @@ class HomeController extends Controller
 
     public function welcome()
     {
-        //$posts = Post::publishedPosts();
-        // var_dump($posts);
-        return view('index'/*,['posts'=>$posts]*/);
+        $posts = Wp_post::all()->where('post_status','publish')->toArray();
+
+        
+       return view('index',compact('posts'));
     }
 
     public function testPost()

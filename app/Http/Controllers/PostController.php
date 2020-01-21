@@ -5,7 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Post;
-
+use App\Wp_post;
+use DB;
 class PostController extends Controller
 {
     /**
@@ -56,16 +57,12 @@ class PostController extends Controller
         }
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  string  $slug
-     */
     public function show($slug)
     {
-        $post = Post::where('slug', $slug)
-                ->first();
-        return view('post',['post'=>$post]);
+        $postdata = Wp_post::select('post_content')->where('post_name', $slug)->get();  //DB::table('wp_posts')->where('post_name', $slug)->get(); 
+      
+        //var_dump($postdata);
+        return view('post',['postdata'=>$postdata]);
     }
 
     /**

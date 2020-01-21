@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Category;
 use Illuminate\Http\Request;
-
+use App\Wp_term;
+use App\Wp_term_relationship;
 class CategoryController extends Controller
 {
     /**
@@ -85,6 +86,16 @@ class CategoryController extends Controller
     }
     public function showPosts($slug)
     {
-        return view('category',['categoryName'=>$slug]);
+        $termId=Wp_term::where('slug',$slug)->value('term_id');
+
+        dd($termId);
+
+        $objects=Wp_term_relationship::where('term_taxonomy_id',16)->get();
+
+        $objects->Post();
+
+        //var_dump($termId->term_id);
+        
+        return view('category',['objects'=>$objects]);
     }
 }

@@ -23,10 +23,10 @@ Route::get('/logout', function()
 */
 Route::get('/previous/{id}', 'PostController@previous')->name('previous');
 
-Route::group(['middleware' => 'auth','prefix' => 'admin'], function () {
+/*Route::group(['middleware' => 'auth','prefix' => 'admin'], function () {
    /* Route::get('/', function () {
     	return view('admin.index');
-	})->name('admin-home'); */
+	})->name('admin-home'); 
 	
 	Route::get('/create-post', 'PostController@create')->name('create-post');
 	Route::post('/save-post', 'PostController@store')->name('save-post');
@@ -40,7 +40,7 @@ Route::group(['middleware' => 'auth','prefix' => 'admin'], function () {
 	Route::post('/file-upload/{folder}/{keepFileName}', 'UtilityDesk@saveFile')->name('file-upload');
 
 	Route::get('/categories', 'CategoryController@index')->name('admin-categories');
-});
+});*/
 
 Route::get('/{slug}', 'PostController@show')->name('show-post');
 Route::get('/category/{slug}', 'CategoryController@showPosts')->name('show-category');
