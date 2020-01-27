@@ -142,7 +142,7 @@
                         <a href="https://kshitij.com/forecasts">Long-term Forecasts</a> | 
                         <a href="https://kshitij.com/economic-calendar">Economic Calendar</a> | 
                         <a href="https://kshitij.com/graph-gallery">Graph Gallery</a> | 
-                        <a href="http://colourofmoney.kshitij.com/">Colour of Money</a> | 
+                        <a href="https://colourofmoney.kshitij.com/">Colour of Money</a> | 
                     <a href="https://kshitij.com/freedata">Free Data</a> | 
                     <a href="https://kshitij.com/testimonials">Testimonials</a> | 
                     <a href="https://kshitij.com/about-us">About Us</a> | 
@@ -151,7 +151,7 @@
                 
             </div>
         <div class="footer">
-        <font color="white" style="margin-left: 10px;">Copyright © 2019 Kshitij, All Rights Reserved</span>
+        <font color="white" style="margin-left: 10px;">Copyright © 2020 Kshitij, All Rights Reserved</span>
         <ul class="list-inline">
     <li> Kshitij Consultancy Services</li>
     <li> Email: <a href="mailto:info@kshitij.com">info@kshitij.com</a></li>

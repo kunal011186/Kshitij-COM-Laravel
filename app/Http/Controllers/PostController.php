@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Post;
 use App\Wp_post;
+use App\Wp_term_relationship;
+use App\Wp_term;
 use DB;
 class PostController extends Controller
 {
@@ -59,10 +61,50 @@ class PostController extends Controller
 
     public function show($slug)
     {
-        $postdata = Wp_post::select('post_content')->where('post_name', $slug)->get();  //DB::table('wp_posts')->where('post_name', $slug)->get(); 
-      
-        //var_dump($postdata);
-        return view('post',['postdata'=>$postdata]);
+        $postQuery=Wp_post::where('post_name', $slug);
+        $postdata = $postQuery->value('post_content');  //DB::table('wp_posts')->where('post_name', $slug)->get(); 
+        $postTitle = $postQuery->value('post_title');
+        $postId = $postQuery->value('ID');
+        $postTime = $postQuery->value('post_modified');
+        $authorId = $postQuery->value('post_author');
+        $termID=Wp_term_relationship::where('object_id', $postId)->value('term_taxonomy_id');
+        if(!$termID)
+        $category='';
+        else
+        $category=Wp_term::where('term_id', $termID)->value('name');
+        $categoryLink=Wp_term::where('term_id', $termID)->value('slug');
+
+
+        $authorFname=DB::table('wp_usermeta')->where([
+                                ['user_id', '=', $authorId],
+                                ['meta_key', '=', 'first_name'],
+                            ])->value('meta_value');
+
+        $authorLname=DB::table('wp_usermeta')->where([
+                                ['user_id', '=', $authorId],
+                                ['meta_key', '=', 'last_name'],
+                            ])->value('meta_value');
+
+        $author=$authorFname." ".$authorLname;
+
+        $authorDesc=DB::table('wp_usermeta')->where([
+                                ['user_id', '=', $authorId],
+                                ['meta_key', '=', 'description'],
+                            ])->value('meta_value');
+                                    
+       // dd($author);
+
+
+
+
+
+        return view('post',['postdata'=>$postdata,
+                            'postTitle'=>$postTitle,
+                            'postTime'=>$postTime,
+                            'category'=>$category,
+                            'categoryLink'=>$categoryLink,
+                            'author'=>$author,
+                            'authorDesc'=>$authorDesc]);
     }
 
     /**

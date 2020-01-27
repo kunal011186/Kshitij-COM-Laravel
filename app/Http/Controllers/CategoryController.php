@@ -88,9 +88,9 @@ class CategoryController extends Controller
     {
         $termId=Wp_term::where('slug',$slug)->value('term_id');
 
-        dd($termId);
+       // dd($termId);
 
-        $objects=Wp_term_relationship::where('term_taxonomy_id',16)->get();
+        $objects=Wp_term_relationship::where('term_taxonomy_id',$termId)->get();
 
         $objects->Post();
 
