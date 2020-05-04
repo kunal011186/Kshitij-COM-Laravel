@@ -6,6 +6,7 @@ use App\Category;
 use Illuminate\Http\Request;
 use App\Wp_term;
 use App\Wp_term_relationship;
+use DB;
 class CategoryController extends Controller
 {
     /**
@@ -88,14 +89,25 @@ class CategoryController extends Controller
     {
         $termId=Wp_term::where('slug',$slug)->value('term_id');
 
+        $category=Wp_term::where('slug',$slug)->value('name');
+
        // dd($termId);
 
-        $objects=Wp_term_relationship::where('term_taxonomy_id',$termId)->get();
+        $objects= DB::table('wp_term_relationships')->where('term_taxonomy_id',$termId)->pluck('object_id');
 
-        $objects->Post();
+        $posts = DB::table('wp_posts')->whereIn('ID', $objects);
 
-        //var_dump($termId->term_id);
-        
-        return view('category',['objects'=>$objects]);
+        $publishPosts=$posts->where('post_status','publish')->orderBy('post_date', 'desc')->get();
+
+        foreach ($publishPosts as $key => $value) {
+            $featuredImg[$key]=DB::table('wp_posts')->where([
+                                                                ['post_title', '=', $value->post_title],
+                                                                ['post_type', '=', 'attachment']
+                                                            ])->value('guid');
+        }
+
+        var_dump($featuredImg);
+       // return view('category',['posts'=>$publishPosts,
+       //                         'category'=>$category]);
     }
 }

@@ -128,6 +128,30 @@
         <div class="d-widget8 d-sidebar"><h3 class="text-muted" style="text-align:center">TWEETS</h3><p align="center"><a class="twitter-follow-button" href="https://twitter.com/Kshitijfx">Follow @Kshitijfx</a></p><hr>
         </div>
 
+        <?php
+    $sidebarContent = config('kshitij.sidebar-widgets');
+?>
+                        
+                 <!--    DISPLAY RIGHT SIDE WIDGETS -->
+                        @foreach($sidebarContent as $item)
+                            @if($item['type'] == 'view')
+                                @if($item['view-name']=='widgets.slider')
+                                @widget('slider',[],$item['name'],$item['settings'],$item['time'])
+                                <hr style="border-top: 1px solid #807e7e;" />
+                                @elseif($item['view-name']=='widgets.slider-two')
+                                @widget('sliderwhats',[],$item['name'],$item['settings'],$item['time'])
+                                <hr style="border-top: 1px solid #807e7e;" />
+                                @else
+                                 @include($item['view-name'])
+                                 <hr style="border-top: 1px solid #807e7e;" />
+                                @endif
+                            @else
+                                  <?php $file_name = "widget-codes/".$item['code']; ?> 
+                                   {!!file_get_contents($file_name) !!}
+                                   <hr style="border-top: 1px solid #807e7e;" />
+                             @endif
+                        @endforeach
+
          </div>
             </div>
         </div>

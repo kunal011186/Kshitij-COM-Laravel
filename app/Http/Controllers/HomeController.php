@@ -17,6 +17,11 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Post;
 
+use Carbon\Carbon;
+
+use App\Wp_term;
+use App\Wp_term_relationship;
+
 use App\Wp_post;
 
 class HomeController extends Controller
@@ -37,22 +42,54 @@ class HomeController extends Controller
 
     public function welcome()
     {
-        $posts = Wp_post::all()->where('post_status','publish')->toArray();
 
-        
-       return view('index',compact('posts'));
+        $dataSettings=[];
+
+        $publishPosts=[];
+
+        $dataSettings['risk-management']= 'Forex Risk Management';
+
+        $dataSettings['investment-psychology']= 'Investment Psychology';
+
+        $dataSettings['research']= 'Research';
+
+        $dataSettings['global-equities']= 'Global Equities';
+
+        $dataSettings['longterm-forex-forecasts']= 'Longterm Forex Forecasts';
+
+        //For Recent posts
+        $termId=Wp_term::where('slug','top-stories')->value('term_id');
+
+        $objects= DB::table('wp_term_relationships')->where('term_taxonomy_id',$termId)->pluck('object_id');
+
+        $posts = DB::table('wp_posts')->whereIn('ID', $objects);
+
+        $currentPosts=$posts->where('post_status','publish')->orderBy('post_date', 'desc')->take(5)->get();
+        //end
+        //for all category
+        foreach ($dataSettings as $key => $value) {
+
+        $termId=Wp_term::where('slug',$key)->value('term_id');
+
+        $objects= DB::table('wp_term_relationships')->where('term_taxonomy_id',$termId)->pluck('object_id');
+
+        $posts = DB::table('wp_posts')->whereIn('ID', $objects);
+
+        $publishPosts[$key]=$posts->where('post_status','publish')->orderBy('post_date', 'desc')->take(3)->get();
+    
+        }
+        //end
+
+        $latestPost = Wp_post::where('post_status','publish')->latest('post_date')->first();
+
+        $dt = Carbon::now();
+       return view('index',['posts'=>$publishPosts,
+                            'dataSettings'=>$dataSettings,
+                            'currentPosts'=>$currentPosts,
+                            'latestPost'=>$latestPost,
+                            'dt'=>$dt
+                            ]);
     }
 
-    public function testPost()
-    {
-        $data ="";
-
-        $data= DB::table('wp_posts')->where('post_title', 'Investing - Where do we want to be right - Short Term or Long Term?')->get();
-
-        var_dump($data);
-
-       // $data= Post::getData();
-        
-        //return view('post',array('data'=> $data))->render();
-    }
+   
 }
