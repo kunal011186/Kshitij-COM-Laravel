@@ -9,7 +9,7 @@
 @if($category !='')
 @section('current-breadcrumb')
 
-<a href="https://colourofmoney.kshitij.com/{{$categoryLink}}">{{$category}}</a>
+<a href="https://test.kshitij.com/{{$categoryLink}}">{{$category}}</a>
 
 @stop
 @endif

@@ -5,7 +5,7 @@
                
                 <li><a href="https://kshitij.com">Home</a></li>
                
-                <li><a href="https://colourofmoney.kshitij.com">Colour of Money</a></li>
+                <li><a href="https://test.kshitij.com">Colour of Money</a></li>
                 <li>@yield('current-breadcrumb')</li>
                 <li class="pull-right" style="padding: 10px 0px 0px 0px;">
                     <a href="https://twitter.com/kshitijfx" class="twitter-follow-button" data-show-count="true" data-show-screen-name="false">Follow @kshitij</a>

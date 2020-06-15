@@ -99,15 +99,15 @@ class CategoryController extends Controller
 
         $publishPosts=$posts->where('post_status','publish')->orderBy('post_date', 'desc')->get();
 
-        foreach ($publishPosts as $key => $value) {
+       /* foreach ($publishPosts as $key => $value) {
             $featuredImg[$key]=DB::table('wp_posts')->where([
                                                                 ['post_title', '=', $value->post_title],
                                                                 ['post_type', '=', 'attachment']
                                                             ])->value('guid');
         }
 
-        var_dump($featuredImg);
-       // return view('category',['posts'=>$publishPosts,
-       //                         'category'=>$category]);
+        var_dump($featuredImg); */
+        return view('category',['posts'=>$publishPosts,
+                                'category'=>$category]);
     }
 }

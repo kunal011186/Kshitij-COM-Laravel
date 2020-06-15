@@ -14,7 +14,11 @@
         @include('templates.breadcrumbs-diff')
 @overwrite
 
-@section('content-title', $category)
+@section('content-title')
+
+<span style="font-size: 21px;font-weight: 700;font-family: 'lubalin_graph_demiregular';">{{strtoupper($category)}}</span>
+
+@stop
 @section('content-body')
 
 @foreach($posts as $row)
